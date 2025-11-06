@@ -1,0 +1,38 @@
+package templates
+
+templ Header() {
+	<header class="fixed w-full top-0 left-0 bg-white/80 backdrop-blur-lg shadow-sm z-50 border-b border-gray-100">
+		<nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
+			<div class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
+				Grove<span class="text-purple-600">.</span>
+			</div>
+			<ul class="flex space-x-10 text-gray-700 font-medium text-sm">
+				<li>
+					<a href="#home" class="hover:text-purple-600 transition-colors duration-300 relative group">
+						Home
+						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300"></span>
+					</a>
+				</li>
+				<li>
+					<a href="#product" class="hover:text-purple-600 transition-colors duration-300 relative group">
+						Product
+						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300"></span>
+					</a>
+				</li>
+				<li>
+					<a href="#projects" class="hover:text-purple-600 transition-colors duration-300 relative group">
+						Projects
+						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300"></span>
+					</a>
+				</li>
+				<li>
+					<a href="#about" class="hover:text-purple-600 transition-colors duration-300 relative group">
+						About
+						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300"></span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="pt-24"></div>
+}

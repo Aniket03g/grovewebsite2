@@ -1,0 +1,87 @@
+package templates
+
+templ Base(content templ.Component) {
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Grove Technologies</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+		<style>
+			* {
+				font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+			}
+			html {
+				scroll-behavior: smooth;
+			}
+			body {
+				overflow-x: hidden;
+			}
+			.gradient-bg {
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			}
+			.card-hover {
+				transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+			}
+			.card-hover:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+			}
+			.btn-primary {
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				transition: all 0.3s ease;
+			}
+			.btn-primary:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+			}
+		</style>
+	</head>
+	<body class="bg-gray-50 text-gray-900 antialiased">
+		@Header()
+		<main class="min-h-screen">
+			@content
+		</main>
+		@Footer()
+		<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script>
+			// Initialize AOS
+			AOS.init({
+				duration: 1000,
+				once: true,
+				offset: 100,
+				easing: 'ease-out-cubic'
+			});
+			
+			// Initialize Swiper for Partners section
+			const partnersSwiper = new Swiper('.partnersSwiper', {
+				slidesPerView: 2,
+				spaceBetween: 30,
+				loop: true,
+				autoplay: {
+					delay: 0,
+					disableOnInteraction: false,
+				},
+				speed: 3000,
+				freeMode: true,
+				freeModeMomentum: false,
+				breakpoints: {
+					640: {
+						slidesPerView: 3,
+						spaceBetween: 40,
+					},
+					1024: {
+						slidesPerView: 5,
+						spaceBetween: 50,
+					},
+				},
+			});
+		</script>
+	</body>
+	</html>
+}

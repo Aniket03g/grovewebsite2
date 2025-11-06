@@ -1,0 +1,6 @@
+/* TailwindCSS is loaded via CDN in base.templ */
+/* This file is kept for future custom styles if needed */
+
+html {
+  scroll-behavior: smooth;
+}
