@@ -1,74 +1,88 @@
 package templates
 
 templ Scheduler() {
-	<section id="products" class="relative overflow-hidden bg-white py-24 md:py-32">
+	<section id="scheduler" class="relative overflow-hidden bg-white py-24 md:py-32">
 		<div class="max-w-7xl mx-auto px-6">
-			<div class="flex flex-col md:flex-row items-center justify-between gap-12">
-				<!-- Image -->
-				<div data-aos="fade-right" data-aos-duration="1000" class="flex-1 relative">
-					<div class="relative">
-						<!-- Main image -->
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start">
+				<!-- Images Column - Left Side -->
+				<div class="flex flex-col space-y-8 md:order-1">
+					<!-- Spacer to push first image down - aligns between heading and description -->
+					<div class="hidden md:block h-12"></div>
+					
+					<!-- Main scheduler product image -->
+					<div data-aos="fade-right" data-aos-duration="1000" class="relative">
 						<img 
 							src="/static/img/scheduler.jpg" 
-							alt="GRAV Scheduler System" 
-							class="relative z-10 w-full max-w-lg mx-auto transform hover:scale-105 transition-transform duration-500 rounded-2xl shadow-2xl"
+							alt="Grove Scheduler System" 
+							class="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-[1.02] transition-transform duration-500"
+						/>
+					</div>
+					
+					<!-- Scheduler sheet/diagram image - positioned to align with Key Features list -->
+					<div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" class="relative">
+						<img 
+							src="/static/img/schedulersheet.png" 
+							alt="Grove Scheduler Data Sheet" 
+							class="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-[1.02] transition-transform duration-500"
 						/>
 					</div>
 				</div>
 				
-				<!-- Text Content -->
-				<div data-aos="fade-left" data-aos-duration="1000" class="flex-1 text-center md:text-left">
+				<!-- Text Content - Right Side -->
+				<div data-aos="fade-left" data-aos-duration="1000" class="flex flex-col justify-start text-center md:text-left md:order-2">
+					<!-- Heading -->
 					<h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
 						<span class="bg-gradient-to-r from-purple-600 via-blue-500 to-purple-600 bg-clip-text text-transparent">
 							Grove Scheduler
 						</span>
 					</h2>
-					<p class="text-lg md:text-xl text-gray-600 mb-6 leading-relaxed">
+					
+					<p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
 						Grove Scheduler is a highly reliable Audio Video Scheduler System designed to deliver precise, automated audio and video content in a wide range of environments. Perfect for ensuring timely announcements, alerts, and multimedia playback in schools, factories, retail spaces, and public areas, it provides seamless operation and consistent performance.
 					</p>
 					
 					<!-- Key Features -->
 					<div class="mb-8">
-						<h3 class="text-xl font-bold text-gray-900 mb-4">Key Features:</h3>
-						<ul class="space-y-2 text-gray-700">
+						<h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">Key Features:</h3>
+						<ul class="space-y-3 text-gray-700">
 							<li class="flex items-start">
-								<svg class="w-5 h-5 text-purple-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<svg class="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
 									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
 								</svg>
 								<span>Multi-zone audio and video scheduling</span>
 							</li>
 							<li class="flex items-start">
-								<svg class="w-5 h-5 text-purple-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<svg class="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
 									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
 								</svg>
 								<span>Intuitive web-based interface for easy management</span>
 							</li>
 							<li class="flex items-start">
-								<svg class="w-5 h-5 text-purple-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<svg class="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
 									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
 								</svg>
 								<span>Event-triggered playback capabilities for dynamic content</span>
 							</li>
 							<li class="flex items-start">
-								<svg class="w-5 h-5 text-purple-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<svg class="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
 									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
 								</svg>
 								<span>Centralized content management and distribution</span>
 							</li>
 							<li class="flex items-start">
-								<svg class="w-5 h-5 text-purple-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<svg class="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
 									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
 								</svg>
 								<span>Robust and secure operation for critical environments</span>
 							</li>
 							<li class="flex items-start">
-								<svg class="w-5 h-5 text-purple-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<svg class="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
 									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
 								</svg>
 								<span>Scalable for various deployment sizes, from small to large</span>
 							</li>
 							<li class="flex items-start">
-								<svg class="w-5 h-5 text-purple-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<svg class="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
 									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
 								</svg>
 								<span>Real-time monitoring and reporting for performance insights</span>
@@ -76,7 +90,8 @@ templ Scheduler() {
 						</ul>
 					</div>
 					
-					<div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+					<!-- CTA Buttons -->
+					<div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-auto">
 						<a href="/static/scheduler-datasheet.pdf" target="_blank" class="btn-primary text-white font-semibold px-8 py-4 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 text-center">
 							Get Data Sheet →
 						</a>
